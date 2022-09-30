@@ -59,7 +59,9 @@
           "**/test/**",
           "**/build-tools/**",
           ".projenrc.ts",
-          "projenrc/**/*.ts"
+          "projenrc/**/*.ts",
+          "src/api-docs.lambda.ts",
+          "src/swagger-ui.lambda.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true

@@ -54,6 +54,9 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+/assets/
+!/src/api-docs-function.ts
+!/src/swagger-ui-function.ts
 .idea/
 *.iml
 .vscode/

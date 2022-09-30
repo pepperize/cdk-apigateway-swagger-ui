@@ -22,5 +22,7 @@
 /.projen/tasks.json linguist-generated
 /LICENSE linguist-generated
 /package.json linguist-generated
+/src/api-docs-function.ts linguist-generated
+/src/swagger-ui-function.ts linguist-generated
 /tsconfig.dev.json linguist-generated
 /yarn.lock linguist-generated
