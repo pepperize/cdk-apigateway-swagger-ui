@@ -10,16 +10,17 @@ export interface ApiDocsFunctionProps extends lambda.FunctionOptions {
 }
 
 /**
- * An AWS Lambda function which executes src/api-docs.
+ * An AWS Lambda function which executes functions/src/api-docs.
  */
 export class ApiDocsFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: ApiDocsFunctionProps) {
     super(scope, id, {
-      description: 'src/api-docs.lambda.ts',
+      description: 'functions/src/api-docs.lambda.ts',
       ...props,
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: new lambda.Runtime('nodejs14.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../assets/api-docs.lambda')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../assets/functions/src/api-docs.lambda')),
     });
+    this.addEnvironment('AWS_NODEJS_CONNECTION_REUSE_ENABLED', '1', { removeInEdge: true });
   }
 }

@@ -1,7 +1,7 @@
 import { Stack } from "aws-cdk-lib";
+import { Template } from "aws-cdk-lib/assertions";
 import { RestApi } from "aws-cdk-lib/aws-apigateway";
 import { SwaggerUi } from "../src";
-import { Template } from "aws-cdk-lib/assertions";
 
 describe("SwaggerUi", () => {
   it("Should match snapshot", () => {

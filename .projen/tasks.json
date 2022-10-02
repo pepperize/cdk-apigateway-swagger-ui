@@ -31,7 +31,8 @@
         "OUTFILE": "package.json",
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
-        "RELEASETAG": "dist/releasetag.txt"
+        "RELEASETAG": "dist/releasetag.txt",
+        "RELEASE_TAG_PREFIX": ""
       },
       "steps": [
         {
@@ -45,49 +46,49 @@
       "description": "Prepare assets",
       "steps": [
         {
-          "spawn": "bundle:api-docs.lambda"
+          "spawn": "bundle:functions/src/api-docs.lambda"
         },
         {
-          "spawn": "bundle:swagger-ui.lambda"
+          "spawn": "bundle:functions/src/swagger-ui.lambda"
         },
         {
-          "exec": "npx copyfiles --flat node_modules/swagger-ui-dist/swagger* node_modules/swagger-ui-dist/favicon* assets/swagger-ui.lambda"
+          "exec": "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
         }
       ]
     },
-    "bundle:api-docs.lambda": {
-      "name": "bundle:api-docs.lambda",
-      "description": "Create a JavaScript bundle from src/api-docs.lambda.ts",
+    "bundle:functions/src/api-docs.lambda": {
+      "name": "bundle:functions/src/api-docs.lambda",
+      "description": "Create a JavaScript bundle from functions/src/api-docs.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/api-docs.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/api-docs.lambda/index.js\" --external:aws-sdk"
+          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk"
         }
       ]
     },
-    "bundle:api-docs.lambda:watch": {
-      "name": "bundle:api-docs.lambda:watch",
-      "description": "Continuously update the JavaScript bundle from src/api-docs.lambda.ts",
+    "bundle:functions/src/api-docs.lambda:watch": {
+      "name": "bundle:functions/src/api-docs.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from functions/src/api-docs.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/api-docs.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/api-docs.lambda/index.js\" --external:aws-sdk --watch"
+          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk --watch"
         }
       ]
     },
-    "bundle:swagger-ui.lambda": {
-      "name": "bundle:swagger-ui.lambda",
-      "description": "Create a JavaScript bundle from src/swagger-ui.lambda.ts",
+    "bundle:functions/src/swagger-ui.lambda": {
+      "name": "bundle:functions/src/swagger-ui.lambda",
+      "description": "Create a JavaScript bundle from functions/src/swagger-ui.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/swagger-ui.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/swagger-ui.lambda/index.js\" --external:aws-sdk"
+          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk"
         }
       ]
     },
-    "bundle:swagger-ui.lambda:watch": {
-      "name": "bundle:swagger-ui.lambda:watch",
-      "description": "Continuously update the JavaScript bundle from src/swagger-ui.lambda.ts",
+    "bundle:functions/src/swagger-ui.lambda:watch": {
+      "name": "bundle:functions/src/swagger-ui.lambda:watch",
+      "description": "Continuously update the JavaScript bundle from functions/src/swagger-ui.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle src/swagger-ui.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/swagger-ui.lambda/index.js\" --external:aws-sdk --watch"
+          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node14\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:aws-sdk --watch"
         }
       ]
     },
@@ -137,7 +138,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "jsii --silence-warnings=reserved-word --no-fix-peer-dependencies"
+          "exec": "jsii --silence-warnings=reserved-word"
         }
       ]
     },
@@ -155,7 +156,19 @@
       "description": "Generate API.md from .jsii manifest",
       "steps": [
         {
-          "exec": "jsii-docgen"
+          "exec": "jsii-docgen -o API.md"
+        }
+      ]
+    },
+    "eject": {
+      "name": "eject",
+      "description": "Remove projen from the project",
+      "env": {
+        "PROJEN_EJECTING": "true"
+      },
+      "steps": [
+        {
+          "spawn": "default"
         }
       ]
     },
@@ -164,7 +177,7 @@
       "description": "Runs eslint against the codebase",
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools .projenrc.js"
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools projenrc .projenrc.ts"
         }
       ]
     },
@@ -182,10 +195,7 @@
       "description": "Creates the distribution package",
       "steps": [
         {
-          "exec": "mkdir -p dist"
-        },
-        {
-          "exec": "rsync -a . dist --exclude .git --exclude node_modules"
+          "exec": "if [ ! -z ${CI} ]; then rsync -a . .repo --exclude .git --exclude node_modules && rm -rf dist && mv .repo dist; else npx projen package-all; fi"
         }
       ]
     },
@@ -195,6 +205,33 @@
       "steps": [
         {
           "spawn": "package:js"
+        },
+        {
+          "spawn": "package:java"
+        },
+        {
+          "spawn": "package:python"
+        },
+        {
+          "spawn": "package:dotnet"
+        }
+      ]
+    },
+    "package:dotnet": {
+      "name": "package:dotnet",
+      "description": "Create dotnet language bindings",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -v --target dotnet"
+        }
+      ]
+    },
+    "package:java": {
+      "name": "package:java",
+      "description": "Create java language bindings",
+      "steps": [
+        {
+          "exec": "jsii-pacmak -v --target java"
         }
       ]
     },
@@ -203,10 +240,16 @@
       "description": "Create js language bindings",
       "steps": [
         {
-          "exec": "jsii_version=$(node -p \"JSON.parse(fs.readFileSync('.jsii')).jsiiVersion.split(' ')[0]\")"
-        },
+          "exec": "jsii-pacmak -v --target js"
+        }
+      ]
+    },
+    "package:python": {
+      "name": "package:python",
+      "description": "Create python language bindings",
+      "steps": [
         {
-          "exec": "npx jsii-pacmak@$jsii_version -v --target js"
+          "exec": "jsii-pacmak -v --target python"
         }
       ]
     },
@@ -218,10 +261,6 @@
           "spawn": "docgen"
         }
       ]
-    },
-    "post-upgrade": {
-      "name": "post-upgrade",
-      "description": "Runs after upgrading dependencies"
     },
     "pre-compile": {
       "name": "pre-compile",
@@ -268,15 +307,6 @@
         }
       ]
     },
-    "test:update": {
-      "name": "test:update",
-      "description": "Update jest snapshots",
-      "steps": [
-        {
-          "exec": "jest --updateSnapshot"
-        }
-      ]
-    },
     "test:watch": {
       "name": "test:watch",
       "description": "Run jest in watch mode",
@@ -293,47 +323,12 @@
         "OUTFILE": "package.json",
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
-        "RELEASETAG": "dist/releasetag.txt"
+        "RELEASETAG": "dist/releasetag.txt",
+        "RELEASE_TAG_PREFIX": ""
       },
       "steps": [
         {
           "builtin": "release/reset-version"
-        }
-      ]
-    },
-    "upgrade-projen": {
-      "name": "upgrade-projen",
-      "description": "upgrade projen",
-      "env": {
-        "CI": "0"
-      },
-      "steps": [
-        {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --filter='projen'"
-        },
-        {
-          "exec": "yarn install --check-files"
-        },
-        {
-          "exec": "yarn upgrade projen"
-        },
-        {
-          "exec": "npx projen"
-        },
-        {
-          "spawn": "post-upgrade"
         }
       ]
     },
@@ -342,7 +337,7 @@
       "description": "Watch & compile in the background",
       "steps": [
         {
-          "exec": "jsii -w --silence-warnings=reserved-word --no-fix-peer-dependencies"
+          "exec": "jsii -w --silence-warnings=reserved-word"
         }
       ]
     }

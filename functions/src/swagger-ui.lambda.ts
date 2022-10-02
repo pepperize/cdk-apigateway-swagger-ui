@@ -1,4 +1,5 @@
 import serverlessExpress from "@vendia/serverless-express";
+// @ts-ignore
 import express from "express";
 import * as swaggerUi from "swagger-ui-express";
 

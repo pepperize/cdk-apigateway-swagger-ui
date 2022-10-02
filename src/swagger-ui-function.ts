@@ -10,16 +10,17 @@ export interface SwaggerUiFunctionProps extends lambda.FunctionOptions {
 }
 
 /**
- * An AWS Lambda function which executes src/swagger-ui.
+ * An AWS Lambda function which executes functions/src/swagger-ui.
  */
 export class SwaggerUiFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props?: SwaggerUiFunctionProps) {
     super(scope, id, {
-      description: 'src/swagger-ui.lambda.ts',
+      description: 'functions/src/swagger-ui.lambda.ts',
       ...props,
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: new lambda.Runtime('nodejs14.x', lambda.RuntimeFamily.NODEJS),
       handler: 'index.handler',
-      code: lambda.Code.fromAsset(path.join(__dirname, '../assets/swagger-ui.lambda')),
+      code: lambda.Code.fromAsset(path.join(__dirname, '../assets/functions/src/swagger-ui.lambda')),
     });
+    this.addEnvironment('AWS_NODEJS_CONNECTION_REUSE_ENABLED', '1', { removeInEdge: true });
   }
 }
