@@ -659,12 +659,12 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@pepperize/projen-awscdk-construct@^0.0.247":
-  version "0.0.247"
-  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.247.tgz#4347db8c5bc839745ba4e38479b857918217bb26"
-  integrity sha512-GB4goVXxH6NVZ7Rj9V/O5Bc9RJBc7+Zlb+Hipz54dPq18Tp+7Y34ohRXbOoZBy6EHvyj86SIpYLak+mv3MFCnA==
+"@pepperize/projen-awscdk-construct@0.0.248":
+  version "0.0.248"
+  resolved "https://registry.yarnpkg.com/@pepperize/projen-awscdk-construct/-/projen-awscdk-construct-0.0.248.tgz#ec17f56b763b350e8d5979ad567bcda99a64714c"
+  integrity sha512-J/8MMAqAet0f9Gib5RZCKL3liACNG9lqe8v4+zcvg9w3pDuoERUKl5T7ECUpy4JKLh9WoCDAvBqF7VhOHVy7Jg==
   dependencies:
-    projen "^0.63.0"
+    projen "0.62.27"
 
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
@@ -4402,10 +4402,10 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-projen@^0.63.0:
-  version "0.63.0"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.63.0.tgz#6c19e88edbd2dcaf8850b372b3c650709f7a32f9"
-  integrity sha512-m5xFLR0iyxeUAeNi0m1PwGRvG2imHwzdn9QkZfKBfIhqKBlIKPnSrSbD1wqIhgBAsjgG7anwWRZItMhy9HoMtg==
+projen@0.62.27:
+  version "0.62.27"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.62.27.tgz#ab04a143f30b8510910a49490a5bbfd821d83f7e"
+  integrity sha512-FBb5a0/NYSf12lAhMlsJ/p0p5yiI21nlFjpUU6rxplqVyun7+lrZMhmuW3kPt2IszbkqgGVngKXSZP6CuJ+y1Q==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
