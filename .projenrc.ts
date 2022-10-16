@@ -59,6 +59,17 @@ new awscdk.LambdaFunction(project, {
   cdkDeps: project.cdkDeps,
 });
 
+const dependabot = project.tryFindObjectFile(".github/dependabot.yml");
+dependabot?.addToArray("updates", {
+  "package-ecosystem": "npm",
+  "versioning-strategy": "lockfile-only",
+  directory: "/functions",
+  schedule: {
+    interval: "daily",
+  },
+  labels: ["auto-approve"],
+});
+
 project.tasks
   .tryFind("bundle")
   ?.exec(

@@ -11,3 +11,10 @@ updates:
       - dependency-name: projen
     labels:
       - auto-approve
+  - package-ecosystem: npm
+    versioning-strategy: lockfile-only
+    directory: /functions
+    schedule:
+      interval: daily
+    labels:
+      - auto-approve
