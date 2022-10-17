@@ -24,6 +24,10 @@ const project = new AwsCdkConstructLibrary({
 
   devDeps: ["@pepperize/projen-awscdk-construct"],
 
+  versionrcOptions: {
+    types: [{ type: "chore", section: "Chore", hidden: false }],
+  },
+
   defaultReleaseBranch: "main",
   releaseToNpm: true,
   npmAccess: javascript.NpmAccess.PUBLIC,
@@ -67,6 +71,7 @@ dependabot?.addToArray("updates", {
   schedule: {
     interval: "daily",
   },
+  ignore: [{ "dependency-name": "projen" }],
   labels: ["auto-approve"],
 });
 
@@ -83,6 +88,11 @@ project.synth();
 const functions = new typescript.TypeScriptProject({
   parent: project,
   outdir: "functions",
+  authorName: "Patrick Florek",
+  authorEmail: "patrick.florek@gmail.com",
+  authorOrganization: true,
+  license: "MIT",
+  copyrightOwner: "Pepperize UG (haftungsbeschränkt)",
   name: "@pepperize/cdk-apigateway-swagger-ui-functions",
   defaultReleaseBranch: "main",
   deps: [

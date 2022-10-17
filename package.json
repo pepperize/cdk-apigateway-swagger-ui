@@ -31,7 +31,6 @@
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
-    "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
     "watch": "npx projen watch",
@@ -44,7 +43,7 @@
     "organization": true
   },
   "devDependencies": {
-    "@pepperize/projen-awscdk-construct": "0.0.248",
+    "@pepperize/projen-awscdk-construct": "^0.0.270",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -66,7 +65,7 @@
     "jsii-pacmak": "^1.69.0",
     "json-schema": "^0.4.0",
     "prettier": "^2.7.1",
-    "projen": "0.62.27",
+    "projen": "^0.63.24",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10",

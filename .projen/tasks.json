@@ -32,7 +32,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "VERSIONRCOPTIONS": "{\"types\":[{\"type\":\"chore\",\"section\":\"Chore\",\"hidden\":false}]}"
       },
       "steps": [
         {
@@ -307,15 +308,6 @@
         }
       ]
     },
-    "test:update": {
-      "name": "test:update",
-      "description": "Update jest snapshots",
-      "steps": [
-        {
-          "exec": "jest --updateSnapshot"
-        }
-      ]
-    },
     "test:watch": {
       "name": "test:watch",
       "description": "Run jest in watch mode",
@@ -333,7 +325,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": ""
+        "RELEASE_TAG_PREFIX": "",
+        "VERSIONRCOPTIONS": "{\"types\":[{\"type\":\"chore\",\"section\":\"Chore\",\"hidden\":false}]}"
       },
       "steps": [
         {
