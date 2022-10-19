@@ -779,9 +779,9 @@
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
 "@types/aws-lambda@^8.10.106":
-  version "8.10.107"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.107.tgz#ef08cc6ceb63d786d58038dbe4f5412db68bc12d"
-  integrity sha512-UTI9ZPw4VzvgYUJ7gUU77/ovGrIniRRWiMWxms5dP+1fsxNPeP/cOopQ0mxXPc9NvbeROcDUDN34m8eEhdEitg==
+  version "8.10.108"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.108.tgz#ddadf0d9182f2f5e689ce5fc05b5f711fad6d115"
+  integrity sha512-1yh1W1WoqK3lGHy+V/Fi55zobxrDHUUsluCWdMlOXkCvtsCmHPXOG+CQ2STIL4B1g6xi6I6XzxaF8V9+zeIFLA==
 
 "@types/babel__core@^7.1.14":
   version "7.1.19"
@@ -892,9 +892,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@^29.1.1":
-  version "29.1.2"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.1.2.tgz#7ad8077043ab5f6c108c8111bcc1d224e5600a87"
-  integrity sha512-y+nlX0h87U0R+wsGn6EBuoRWYyv3KFtwRNP3QWp9+k2tJ2/bqcGS3UxD7jgT+tiwJWWq3UsyV4Y+T6rsMT4XMg==
+  version "29.2.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.2.0.tgz#fa98e08b46ab119f1a74a9552c48c589f5378a96"
+  integrity sha512-KO7bPV21d65PKwv3LLsD8Jn3E05pjNjRZvkm+YTacWhVmykAb07wW6IkZUmQAltwQafNcDUEUrMO2h3jeBSisg==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -1268,9 +1268,9 @@ aws-lambda@^1.0.7:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.1227.0, aws-sdk@^2.814.0:
-  version "2.1234.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1234.0.tgz#2a3883295c77c789f8a95fbadc0fd37a998ac026"
-  integrity sha512-QFuSeYM8DPiXytspLnWToy4MWJPGYFCgAy4hi+lRd6ueJtCey7MBIgFNHW814uAJzKUDEdJUJZPvDZvtLM1d/Q==
+  version "2.1235.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1235.0.tgz#60495275360956120ef39b25804c0e54da95414f"
+  integrity sha512-EV2C/GaQh1LBNnNqXfpGdyHR4/8ppQ1BnUfK9voNWMPuFHr1nJ8meIqfo+zwQE8rvGenqcZQBO0lrvauBeNBqw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
