@@ -1,7 +1,10 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda/trigger/api-gateway-proxy";
 import { APIGateway, AWSError } from "aws-sdk";
+import { OpenApiSpecPatcher } from "./open-api-spec-patcher";
 
 let apiGateway: APIGateway;
+
+const patcher = new OpenApiSpecPatcher({ pathsToRemove: ["/api-docs.json", "/api-docs/{proxy+}"] });
 
 export async function handler(request: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> {
   apiGateway = new APIGateway();
@@ -17,10 +20,12 @@ export async function handler(request: APIGatewayProxyEvent): Promise<APIGateway
       })
       .promise();
 
+    const patchedSpec = patcher.patchJson(spec.body!.toString());
+
     return {
       statusCode: 200,
       headers: { "Content-Type": "application/json", "Content-Disposition": "inline" },
-      body: spec.body!.toString(),
+      body: patchedSpec,
       isBase64Encoded: false,
     };
   } catch (e) {
