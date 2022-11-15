@@ -48,10 +48,6 @@ const project = new AwsCdkConstructLibrary({
 
   gitignore: ["/cdk.out/"],
   npmignore: ["/functions/", "!/assets/functions/"],
-  
-  jestOptions: {
-    extraCliOptions: ['--testMatch "**/test/*.test.ts"'],
-  },
 });
 
 new awscdk.LambdaFunction(project, {
