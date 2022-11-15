@@ -51,9 +51,6 @@
         },
         {
           "spawn": "bundle:functions/src/swagger-ui.lambda"
-        },
-        {
-          "exec": "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
         }
       ]
     },
@@ -267,6 +264,12 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation",
       "steps": [
+        {
+          "exec": "(cd functions && yarn build)"
+        },
+        {
+          "exec": "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
+        },
         {
           "spawn": "bundle"
         }
