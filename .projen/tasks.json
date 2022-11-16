@@ -265,7 +265,7 @@
       "description": "Prepare the project for compilation",
       "steps": [
         {
-          "exec": "(cd functions && yarn build)"
+          "exec": "(cd functions && yarn test)"
         },
         {
           "exec": "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
