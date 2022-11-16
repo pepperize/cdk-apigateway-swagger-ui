@@ -81,7 +81,7 @@ project.tasks
     "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
   );
 
-project.tasks.tryFind("pre-compile")?.prependExec("(cd functions && yarn build)");
+project.tasks.tryFind("pre-compile")?.prependExec("(cd functions && yarn test)");
 
 project.setScript("cdk", "cdk");
 
