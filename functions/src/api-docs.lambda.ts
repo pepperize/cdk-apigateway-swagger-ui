@@ -4,7 +4,7 @@ import { OpenApiSpecPatcher } from "./open-api-spec-patcher";
 
 let apiGateway: APIGateway;
 
-const patcher = new OpenApiSpecPatcher({ pathsToRemove: ["/api-docs.json", "/api-docs/{proxy+}"] });
+const patcher = new OpenApiSpecPatcher({ pathsToRemove: ["/api-docs.json", "/api-docs/{proxy+}", "/api-docs"] });
 
 export async function handler(request: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> {
   apiGateway = new APIGateway();
