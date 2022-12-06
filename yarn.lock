@@ -3673,17 +3673,17 @@ jsii-diff@^1.69.0:
     yargs "^16.2.0"
 
 jsii-docgen@^7.0.99:
-  version "7.0.163"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.163.tgz#8dc1a0408359b0e5bece66165a1b11450ffc7725"
-  integrity sha512-JftoMq64bqit5SAS2O5I5FvNj8PsYkRCFrhGWdnmuyysG3Gx4SgqrrHD6lt4OOXXtXziNeZovVK5XEOCdvbSKQ==
+  version "7.0.165"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.165.tgz#8c91fec960a3ad6badfa12c151b8a005fbc00d78"
+  integrity sha512-Z+zL4ULVXPCyg7ItmRC3DL+FXUhP6/maq3gSzwXOkVmcyz9dDmcFA6jdCFZIAHWhUciAZqfW9HMSaQKuohRjXA==
   dependencies:
-    "@jsii/spec" "^1.71.0"
+    "@jsii/spec" "^1.72.0"
     case "^1.6.3"
     fs-extra "^10.1.0"
     glob "^7.2.3"
     glob-promise "^3.4.0"
-    jsii-reflect "^1.71.0"
-    jsii-rosetta "^1.71.0"
+    jsii-reflect "^1.72.0"
+    jsii-rosetta "^1.72.0"
     semver "^7.3.8"
     yargs "^16.2.0"
 
@@ -3718,7 +3718,7 @@ jsii-reflect@^1.71.0, jsii-reflect@^1.72.0:
     oo-ascii-tree "^1.72.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.71.0, jsii-rosetta@^1.72.0:
+jsii-rosetta@^1.72.0:
   version "1.72.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.72.0.tgz#4866b0149bcd3a7c333984c31fee835e7f3589d5"
   integrity sha512-4B9jCfWTPU9s1FsDv7aq7C1kw/eS4WaC7uHujPr+UmALpkfRNu82paylZ5zG1vaUqcBLoQHLydvMRlUzc9xeZw==
