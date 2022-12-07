@@ -1262,9 +1262,9 @@ aws-lambda@^1.0.7:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.1227.0, aws-sdk@^2.814.0:
-  version "2.1268.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1268.0.tgz#a7bb57493f554322057f949fe41c64ee4b9e98a5"
-  integrity sha512-N2A42YrSMTDFCY5lU3QOJz+CZbGKIrAQS3We9+HjEeDP+FPE+M2H9Zzy8Mk18uC6v8bP3lbTTCpTTvtje6i+Pw==
+  version "2.1269.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1269.0.tgz#8f3e6379e39b41fa9ba459d13b37ec47aae482b9"
+  integrity sha512-M8pOxsIjVms3d4o89dcpNTceXTpLU4DahRXH3uddCL9ctfuOmdRKkRvKJIRVMWPQlHWdi8gW1TC+3uCrhDPN8Q==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -4090,9 +4090,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.4.3"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.4.3.tgz#1b0dbd2d7ac2febec792a084a2786a6a8fb3e605"
-  integrity sha512-kuTErUSd9DkJKU5Kf5nitkN4Yf8k41OJL/hudtRR+Rf9YaKJasLHHnQboQdEtbf6DFrqMzwxrPSX8p1engLLbQ==
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.5.0.tgz#e91412590919867cdbb4a12ad9b800b3c27aa057"
+  integrity sha512-2L8iwlWquc2HOtQDPtF6rCaYis6zE1TDUHlliJGO0MVMwjMq9M3Ds1++WANc96thdVqmRqCfTFS5QyMAfEc3uw==
   dependencies:
     chalk "^5.1.2"
     cli-table "^0.3.11"
