@@ -589,14 +589,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@jsii/check-node@1.71.0":
-  version "1.71.0"
-  resolved "https://registry.yarnpkg.com/@jsii/check-node/-/check-node-1.71.0.tgz#32e1b1abc9ace37ad58774079bed694ea0661b78"
-  integrity sha512-O4jN/3QhbUdzKVzyiP3P4X5CTPK1+g0+hSTnBSaHpi7F4T1klK+oUF9JBmhFdUtwVJE9bZuySnXkms2f/P0fsw==
-  dependencies:
-    chalk "^4.1.2"
-    semver "^7.3.8"
-
 "@jsii/check-node@1.72.0":
   version "1.72.0"
   resolved "https://registry.yarnpkg.com/@jsii/check-node/-/check-node-1.72.0.tgz#fde581956fb006489606ed09ef475cf2f05c2f91"
@@ -605,7 +597,7 @@
     chalk "^4.1.2"
     semver "^7.3.8"
 
-"@jsii/spec@1.72.0", "@jsii/spec@^1.71.0", "@jsii/spec@^1.72.0":
+"@jsii/spec@1.72.0", "@jsii/spec@^1.72.0":
   version "1.72.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.72.0.tgz#ce9d76ec221ed39b9f602477378bf1b957c63d8f"
   integrity sha512-zlKTRU8Pu8gIFTMl7ctj+f0l5YPEjAitUfOnSSNv6rZUY20p/zPjkBBw75Nt/4wfkz4UVagWJKuangxfkpsMuw==
@@ -3627,15 +3619,15 @@ jsesc@^2.5.1:
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
 jsii-diff@^1.69.0:
-  version "1.71.0"
-  resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.71.0.tgz#9a3bd3c33b62ac09d762397c0f91b284601f71fe"
-  integrity sha512-v/HpJR33QZEf1nWlxoKUKfk23xkwgQQwcXN16xcLFB56WWoa1q6KA23YoAPn+FvsBzGhBqIdKv/2wRo/ZttkXw==
+  version "1.72.0"
+  resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.72.0.tgz#a8689bba2886451ff1ad5da7e7383c60bc99cf3d"
+  integrity sha512-+rGhNuX2+pEXrGco6R36tgqtr7eg2ysLyILpCK6Rv4seiWZ8EUge/6Ifk6KzwgHmQ/v0Mk9Q2lmu8W22zWJNtQ==
   dependencies:
-    "@jsii/check-node" "1.71.0"
-    "@jsii/spec" "^1.71.0"
+    "@jsii/check-node" "1.72.0"
+    "@jsii/spec" "^1.72.0"
     fs-extra "^10.1.0"
-    jsii-reflect "^1.71.0"
-    log4js "^6.7.0"
+    jsii-reflect "^1.72.0"
+    log4js "^6.7.1"
     yargs "^16.2.0"
 
 jsii-docgen@^7.0.99:
@@ -3672,7 +3664,7 @@ jsii-pacmak@^1.69.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.71.0, jsii-reflect@^1.72.0:
+jsii-reflect@^1.72.0:
   version "1.72.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.72.0.tgz#33ac2529f81ff8482c01770fd66cbd31822b86b6"
   integrity sha512-gEsL1QO8EY3OAjCkVt7Vnm0LeflTTXJkEYRCHdATjdXLMP3laSUWHcNuE+6KNBsVUMJr2zJgVQyi7moqRSonzw==
@@ -3901,7 +3893,7 @@ lodash@^4.17.15, lodash@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-log4js@^6.7.0, log4js@^6.7.1:
+log4js@^6.7.1:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/log4js/-/log4js-6.7.1.tgz#06e12b1ac915dd1067146ffad8215f666f7d2c51"
   integrity sha512-lzbd0Eq1HRdWM2abSD7mk6YIVY0AogGJzb/z+lqzRk+8+XJP+M6L1MS5FUSc3jjGru4dbKjEMJmqlsoYYpuivQ==
