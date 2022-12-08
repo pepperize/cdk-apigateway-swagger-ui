@@ -4090,9 +4090,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.5.0"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.5.0.tgz#e91412590919867cdbb4a12ad9b800b3c27aa057"
-  integrity sha512-2L8iwlWquc2HOtQDPtF6rCaYis6zE1TDUHlliJGO0MVMwjMq9M3Ds1++WANc96thdVqmRqCfTFS5QyMAfEc3uw==
+  version "16.5.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.5.1.tgz#f2c15c9c82a8b836745fc8d08d071af46dee3e32"
+  integrity sha512-LSDcPpnK41GnsIw1JO+sUe1QJPA8+pzLOW5Ahep2zOBaZk+Dkg/stow3FAT19scfYZRx3YyKoehrJQOSXN3t6g==
   dependencies:
     chalk "^5.1.2"
     cli-table "^0.3.11"
@@ -5303,9 +5303,9 @@ typedarray-to-buffer@^3.1.5:
     is-typedarray "^1.0.0"
 
 typescript@^4.8.4:
-  version "4.9.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.3.tgz#3aea307c1746b8c384435d8ac36b8a2e580d85db"
-  integrity sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==
+  version "4.9.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.4.tgz#a2a3d2756c079abda241d75f149df9d561091e78"
+  integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
