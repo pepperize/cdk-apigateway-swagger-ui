@@ -2164,9 +2164,9 @@ escodegen@^2.0.0:
     source-map "~0.6.1"
 
 eslint-config-prettier@^8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
-  integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.6.0.tgz#dec1d29ab728f4fa63061774e1672ac4e363d207"
+  integrity sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
@@ -3665,9 +3665,9 @@ jsii-diff@^1.69.0:
     yargs "^16.2.0"
 
 jsii-docgen@^7.0.99:
-  version "7.0.192"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.192.tgz#ef9596389fc5a4e183d33659326a4163d6509297"
-  integrity sha512-/6vu7rspCEqefFAyMYsVBsf73ekgSfuQyzZmhnVim0GfIH0ZQeoApRJ/z1QAuWEGGzVpkhOe/8WNSjcJ7LFyVw==
+  version "7.0.193"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.193.tgz#a021bf56665dc1db5f693ef4dbf8204b518dda51"
+  integrity sha512-MCdMWAjn6oQVERve+x0JE6/x4C5xbNj5MoPkkv+coBNlELLm0MuG6O8AlcvSEnObFQHvOjpOosakOO2CI+OlKA==
   dependencies:
     "@jsii/spec" "^1.72.0"
     case "^1.6.3"
