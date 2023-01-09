@@ -3631,9 +3631,9 @@ jsii-diff@^1.69.0:
     yargs "^16.2.0"
 
 jsii-docgen@^7.0.99:
-  version "7.0.196"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.196.tgz#a3057473e9d836086f722f6c46b3d42dcdf18d57"
-  integrity sha512-ps6oEiDhFe16N2JQI2e0D+K1sK6k5Kz6kopQK3IGD/vdNA2jOdH6dO0mx4ewWTH05ReNBl5Hgmpwc8Z5AWWRpQ==
+  version "7.0.199"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.199.tgz#905f7bb7b643a1b38b035e951085270703b2927e"
+  integrity sha512-IxMWfzQMtPI9ORzN+HNWXtgy26BZ6wXYfSYFyzOVd3pHn5YYx6e2ZIW3rEd03+tthq65SmWUKNC1HmyKyBxZsw==
   dependencies:
     "@jsii/spec" "^1.73.0"
     case "^1.6.3"
@@ -4397,9 +4397,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier@^2.7.1:
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.1.tgz#4e1fd11c34e2421bc1da9aea9bd8127cd0a35efc"
-  integrity sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
+  integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==
 
 pretty-format@^27.0.0, pretty-format@^27.5.1:
   version "27.5.1"
