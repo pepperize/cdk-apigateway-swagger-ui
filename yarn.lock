@@ -597,7 +597,7 @@
     chalk "^4.1.2"
     semver "^7.3.8"
 
-"@jsii/spec@1.74.0", "@jsii/spec@^1.73.0", "@jsii/spec@^1.74.0":
+"@jsii/spec@1.74.0", "@jsii/spec@^1.74.0":
   version "1.74.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.74.0.tgz#3bd974e7113c13ef85057d4de65ee44d4fcb8f37"
   integrity sha512-+Kfh7Xdvt6rmZ/W3OhOQq4iWcoZvvYwbfOm0NB7uF70q20LYaKMvLKaYWPTlxSZTrkScZwHrIFTryLlJ/e/v+w==
@@ -3778,7 +3778,7 @@ jsii-pacmak@^1.69.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.73.0, jsii-reflect@^1.74.0:
+jsii-reflect@^1.74.0:
   version "1.74.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.74.0.tgz#ddc1e9780dd120337d901a4a4b72ca5a1492a2c3"
   integrity sha512-/yt04q5pfnwZZtiHkXxg3svJYI3U77uhbCE/sdcVDoCsRLJhpsI2k+7Py0wls+YXhs6V50jIesw8/YAatfGveg==
@@ -3790,7 +3790,7 @@ jsii-reflect@^1.73.0, jsii-reflect@^1.74.0:
     oo-ascii-tree "^1.74.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.73.0, jsii-rosetta@^1.74.0:
+jsii-rosetta@^1.74.0:
   version "1.74.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.74.0.tgz#700c025c798bb668a88911630a2df87a1169cd32"
   integrity sha512-dP3c0oJ8XYNKq/OC1v7algTPLXcd9VmhiGQOwVs4R6U9xfo82A3JQ675u3vXXFqBt3OwRXCDL4L9Kk5IwrteyQ==
