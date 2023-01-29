@@ -3745,17 +3745,17 @@ jsii-diff@^1.69.0:
     yargs "^16.2.0"
 
 jsii-docgen@^7.0.99:
-  version "7.0.216"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.216.tgz#ed1ecab41d7314b7d2f6f42ad1f4d1235db967a7"
-  integrity sha512-Usn+jJB4ne7WN/34okZQSTNEKK4lecn3pIokN0vlpsAHq7a+FUXJIN71YfEQb56d+YvsnD3CPVJJ4tYz/wjm7w==
+  version "7.0.218"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-7.0.218.tgz#de2bc0b064f5356a7f070c23464262449b4570e9"
+  integrity sha512-Q6oFvs0RUIndBAf8R6QcG/NA7RyPrAJ2AfvgukUQC3TlnNfMtz1dkYTx8t0eo/25wm5q+evHpGYUV4/LekNBgg==
   dependencies:
-    "@jsii/spec" "^1.73.0"
+    "@jsii/spec" "^1.74.0"
     case "^1.6.3"
     fs-extra "^10.1.0"
     glob "^7.2.3"
     glob-promise "^3.4.0"
-    jsii-reflect "^1.73.0"
-    jsii-rosetta "^1.73.0"
+    jsii-reflect "^1.74.0"
+    jsii-rosetta "^1.74.0"
     semver "^7.3.8"
     yargs "^16.2.0"
 
