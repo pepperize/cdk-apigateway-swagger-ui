@@ -841,22 +841,22 @@
   dependencies:
     "@types/node" "*"
 
-"@types/express-serve-static-core@^4.17.31":
-  version "4.17.31"
-  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.31.tgz#a1139efeab4e7323834bb0226e62ac019f474b2f"
-  integrity sha512-DxMhY+NAsTwMMFHBTtJFNp5qiHKJ7TeqOo23zVEM9alT1Ml27Q3xcTH0xwxn7Q0BbMcVEJOs/7aQtUWupUQN3Q==
+"@types/express-serve-static-core@^4.17.33":
+  version "4.17.33"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.33.tgz#de35d30a9d637dc1450ad18dd583d75d5733d543"
+  integrity sha512-TPBqmR/HRYI3eC2E5hmiivIzv+bidAfXofM+sbonAGvyDhySGw9/PQZFt2BLOrjUUR++4eJVpx6KnLQK1Fk9tA==
   dependencies:
     "@types/node" "*"
     "@types/qs" "*"
     "@types/range-parser" "*"
 
 "@types/express@*", "@types/express@^4.17.14":
-  version "4.17.16"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.16.tgz#986caf0b4b850611254505355daa24e1b8323de8"
-  integrity sha512-LkKpqRZ7zqXJuvoELakaFYuETHjZkSol8EV6cNnyishutDBCCdv6+dsKPbKkCcIk57qRphOLY5sEgClw1bO3gA==
+  version "4.17.17"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.17.tgz#01d5437f6ef9cfa8668e616e13c2f2ac9a491ae4"
+  integrity sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==
   dependencies:
     "@types/body-parser" "*"
-    "@types/express-serve-static-core" "^4.17.31"
+    "@types/express-serve-static-core" "^4.17.33"
     "@types/qs" "*"
     "@types/serve-static" "*"
 
@@ -1280,9 +1280,9 @@ aws-lambda@^1.0.7:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.1227.0, aws-sdk@^2.814.0:
-  version "2.1308.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1308.0.tgz#6c6bca22ef1874379e1471f25b3202d0a45f96bb"
-  integrity sha512-tm4UXah8dCqt1geyxrtoyp6dN5QhuLjNeACUZEsffww5oZPMx24EX9dAtvtSu3UfIHwmbR74QomYi1c1u8Jndg==
+  version "2.1309.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1309.0.tgz#2bc6e25af6da39a6c9c48080a43b35596a58a2c5"
+  integrity sha512-EC/EtDDWDoJnovvmNlJqvojNJMbFZ78HESzgFiond5vzPS+FIWnWgGJ1ZVvIWU9O4X5I8cEMckwHCTfVYNcZxA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
