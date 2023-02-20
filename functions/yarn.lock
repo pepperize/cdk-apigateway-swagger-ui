@@ -5425,9 +5425,9 @@ swagger-ui-dist@>=4.11.0:
   integrity sha512-kOIU7Ts3TrXDLb3/c9jRe4qGp8O3bRT19FFJA8wJfrRFkcK/4atPn3krhtBVJ57ZkNNofworXHxuYwmaisXBdg==
 
 swagger-ui-express@^4.5.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.6.0.tgz#fc297d80c614c80f5d7def3dab50b56428cfe1c9"
-  integrity sha512-ZxpQFp1JR2RF8Ar++CyJzEDdvufa08ujNUJgMVTMWPi86CuQeVdBtvaeO/ysrz6dJAYXf9kbVNhWD7JWocwqsA==
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-4.6.1.tgz#7283d34b17f3a9c113764505fa85a7a38bc040a1"
+  integrity sha512-Pss7YNFKNdq66XKNjRe4IRXKKYNx/LvOSml9TdrZ8/78UpxUHIp9JoXpXWA5Z4L+SCmX63DZ9IPlQ8nnRuncvA==
   dependencies:
     swagger-ui-dist ">=4.11.0"
 
