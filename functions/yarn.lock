@@ -1023,13 +1023,13 @@
     tsutils "^3.21.0"
 
 "@typescript-eslint/parser@^5":
-  version "5.57.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.57.1.tgz#af911234bd4401d09668c5faf708a0570a17a748"
-  integrity sha512-hlA0BLeVSA/wBPKdPGxoVr9Pp6GutGoY380FEhbVi0Ph4WNe8kLvqIRx76RSQt1lynZKfrXKs0/XeEk4zZycuA==
+  version "5.58.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.58.0.tgz#2ac4464cf48bef2e3234cb178ede5af352dddbc6"
+  integrity sha512-ixaM3gRtlfrKzP8N6lRhBbjTow1t6ztfBvQNGuRM8qH1bjFFXIJ35XY+FC0RRBKn3C6cT+7VW1y8tNm7DwPHDQ==
   dependencies:
-    "@typescript-eslint/scope-manager" "5.57.1"
-    "@typescript-eslint/types" "5.57.1"
-    "@typescript-eslint/typescript-estree" "5.57.1"
+    "@typescript-eslint/scope-manager" "5.58.0"
+    "@typescript-eslint/types" "5.58.0"
+    "@typescript-eslint/typescript-estree" "5.58.0"
     debug "^4.3.4"
 
 "@typescript-eslint/scope-manager@5.57.1":
@@ -1039,6 +1039,14 @@
   dependencies:
     "@typescript-eslint/types" "5.57.1"
     "@typescript-eslint/visitor-keys" "5.57.1"
+
+"@typescript-eslint/scope-manager@5.58.0":
+  version "5.58.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/scope-manager/-/scope-manager-5.58.0.tgz#5e023a48352afc6a87be6ce3c8e763bc9e2f0bc8"
+  integrity sha512-b+w8ypN5CFvrXWQb9Ow9T4/6LC2MikNf1viLkYTiTbkQl46CnR69w7lajz1icW0TBsYmlpg+mRzFJ4LEJ8X9NA==
+  dependencies:
+    "@typescript-eslint/types" "5.58.0"
+    "@typescript-eslint/visitor-keys" "5.58.0"
 
 "@typescript-eslint/type-utils@5.57.1":
   version "5.57.1"
@@ -1055,6 +1063,11 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.57.1.tgz#d9989c7a9025897ea6f0550b7036027f69e8a603"
   integrity sha512-bSs4LOgyV3bJ08F5RDqO2KXqg3WAdwHCu06zOqcQ6vqbTJizyBhuh1o1ImC69X4bV2g1OJxbH71PJqiO7Y1RuA==
 
+"@typescript-eslint/types@5.58.0":
+  version "5.58.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-5.58.0.tgz#54c490b8522c18986004df7674c644ffe2ed77d8"
+  integrity sha512-JYV4eITHPzVQMnHZcYJXl2ZloC7thuUHrcUmxtzvItyKPvQ50kb9QXBkgNAt90OYMqwaodQh2kHutWZl1fc+1g==
+
 "@typescript-eslint/typescript-estree@5.57.1":
   version "5.57.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.57.1.tgz#10d9643e503afc1ca4f5553d9bbe672ea4050b71"
@@ -1062,6 +1075,19 @@
   dependencies:
     "@typescript-eslint/types" "5.57.1"
     "@typescript-eslint/visitor-keys" "5.57.1"
+    debug "^4.3.4"
+    globby "^11.1.0"
+    is-glob "^4.0.3"
+    semver "^7.3.7"
+    tsutils "^3.21.0"
+
+"@typescript-eslint/typescript-estree@5.58.0":
+  version "5.58.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-5.58.0.tgz#4966e6ff57eaf6e0fce2586497edc097e2ab3e61"
+  integrity sha512-cRACvGTodA+UxnYM2uwA2KCwRL7VAzo45syNysqlMyNyjw0Z35Icc9ihPJZjIYuA5bXJYiJ2YGUB59BqlOZT1Q==
+  dependencies:
+    "@typescript-eslint/types" "5.58.0"
+    "@typescript-eslint/visitor-keys" "5.58.0"
     debug "^4.3.4"
     globby "^11.1.0"
     is-glob "^4.0.3"
@@ -1088,6 +1114,14 @@
   integrity sha512-RjQrAniDU0CEk5r7iphkm731zKlFiUjvcBS2yHAg8WWqFMCaCrD0rKEVOMUyMMcbGPZ0bPp56srkGWrgfZqLRA==
   dependencies:
     "@typescript-eslint/types" "5.57.1"
+    eslint-visitor-keys "^3.3.0"
+
+"@typescript-eslint/visitor-keys@5.58.0":
+  version "5.58.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-5.58.0.tgz#eb9de3a61d2331829e6761ce7fd13061781168b4"
+  integrity sha512-/fBraTlPj0jwdyTwLyrRTxv/3lnU2H96pNTVM6z3esTWLtA5MZ9ghSMJ7Rb+TtUAdtEw9EyJzJ0EydIMKxQ9gA==
+  dependencies:
+    "@typescript-eslint/types" "5.58.0"
     eslint-visitor-keys "^3.3.0"
 
 "@vendia/serverless-express@^4.10.1":
@@ -1295,9 +1329,9 @@ aws-lambda@^1.0.7:
     watchpack "^2.0.0-beta.10"
 
 aws-sdk@^2.1227.0, aws-sdk@^2.814.0:
-  version "2.1353.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1353.0.tgz#0fdbef8532c7ca152ad5a74632c680b6e79205a6"
-  integrity sha512-IEzWRxeecNYwUEvHVvYlE9Q85VF1uytzL0SeZp67xl9BQHAhwPVMZyTqqxUq3z4A/8iDUteZe/o0DIJhttoeTg==
+  version "2.1354.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1354.0.tgz#26a1cf72c84a4c105caf0025621a5f04327181e4"
+  integrity sha512-3aDxvyuOqMB9DqJguCq6p8momdsz0JR1axwkWOOCzHA7a35+Bw+WLmqt3pWwRjR1tGIwkkZ2CvGJObYHsOuw3w==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1308,7 +1342,7 @@ aws-sdk@^2.1227.0, aws-sdk@^2.814.0:
     url "0.10.3"
     util "^0.12.4"
     uuid "8.0.0"
-    xml2js "0.4.19"
+    xml2js "0.5.0"
 
 babel-jest@^29.5.0:
   version "29.5.0"
@@ -5839,13 +5873,13 @@ xdg-basedir@^5.0.1, xdg-basedir@^5.1.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-5.1.0.tgz#1efba19425e73be1bc6f2a6ceb52a3d2c884c0c9"
   integrity sha512-GCPAHLvrIH13+c0SuacwvRYj2SxJXQ4kaVTT5xgL3kPrz56XxkF21IGhjSE1+W0aw7gpBWRGXLCPnPby6lSpmQ==
 
-xml2js@0.4.19:
-  version "0.4.19"
-  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.19.tgz#686c20f213209e94abf0d1bcf1efaa291c7827a7"
-  integrity sha512-esZnJZJOiJR9wWKMyuvSE1y6Dq5LCuJanqhxslH2bxM6duahNZ+HMpCLhBQGZkbX6xRf8x1Y2eJlgt2q3qo49Q==
+xml2js@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.5.0.tgz#d9440631fbb2ed800203fad106f2724f62c493b7"
+  integrity sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==
   dependencies:
     sax ">=0.6.0"
-    xmlbuilder "~9.0.1"
+    xmlbuilder "~11.0.0"
 
 xml@^1.0.1:
   version "1.0.1"
@@ -5863,10 +5897,10 @@ xmlbuilder2@^2.4.1:
     "@types/node" "*"
     js-yaml "3.14.0"
 
-xmlbuilder@~9.0.1:
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
-  integrity sha512-7YXTQc3P2l9+0rjaUbLwMKRhtmwg1M1eDf6nag7urC7pIPYLD9W/jmzQ4ptRSUbodw5S0jfoGTflLemQibSpeQ==
+xmlbuilder@~11.0.0:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
+  integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
 
 y18n@^5.0.5:
   version "5.0.8"
