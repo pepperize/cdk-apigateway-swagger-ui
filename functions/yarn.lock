@@ -942,9 +942,9 @@
   integrity sha512-IOXCvVRToe7e0ny7HpT/X9Rb2RYtElG1a+VshjwT00HxrM2dWBApHQoqsI6WiY7Q03vdf2bCrIGzVrkF/5t10w==
 
 "@types/node@^14":
-  version "14.18.44"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.44.tgz#1d42ba325c5b434ee78437378ef0b7589f32c151"
-  integrity sha512-Sg79dXC3jrRlG0QOLrK5eq2hRzpU4pkD7xBiYNYJ6r9OitJMxkpTpWf6m3qa2AWzb76uMHx+6x5T1Y/WAiS3nw==
+  version "14.18.45"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.45.tgz#d962a7409509dd4de3ce4838e83f49b5703ec09d"
+  integrity sha512-Nd+FPp60jEaJpm4LAxuLT3wIhB4k0Jdj9DAP4ydqGyMg8DhE+7oM1we+QkwOkpMySTjcqcNfPOWY5kBuAOhkeg==
 
 "@types/prettier@^2.1.5":
   version "2.7.1"
@@ -1091,9 +1091,9 @@
     eslint-visitor-keys "^3.3.0"
 
 "@vendia/serverless-express@^4.10.1":
-  version "4.10.1"
-  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.1.tgz#6489cd179734f1cd690b93a90ae2e83ae8adc639"
-  integrity sha512-8FM/GnQ8bbp1fynAWLGzNIy3Hyhoevixwh2Aj8qBPpw7rkbWZ1I7RC2XhZZaTZo/1JTDlff4cDDmkgY0CzUV7g==
+  version "4.10.3"
+  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.3.tgz#1260cac642991a597c801f149d27833e1a9cc890"
+  integrity sha512-/bgmivwBYN9F7PPOBSQaA8AQidUT5INHlstodazNlKbpAe+QbOjrUpN83m4GvZIMUlXXg8H07cGcE3yjszOSlQ==
 
 abbrev@1:
   version "1.1.1"
