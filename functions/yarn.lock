@@ -1108,9 +1108,9 @@
     eslint-visitor-keys "^3.3.0"
 
 "@vendia/serverless-express@^4.10.1":
-  version "4.10.3"
-  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.3.tgz#1260cac642991a597c801f149d27833e1a9cc890"
-  integrity sha512-/bgmivwBYN9F7PPOBSQaA8AQidUT5INHlstodazNlKbpAe+QbOjrUpN83m4GvZIMUlXXg8H07cGcE3yjszOSlQ==
+  version "4.10.4"
+  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.4.tgz#041c04cf47a8053392299dee244283fdfe84766e"
+  integrity sha512-OH2cX+LqtrayCIkHAkShiLnvrgqGDvwIQEex5dHc/uJitBQjIz3q7dZtfU7cZ5vcR9Vkide5xJQDBEMbXoWLeA==
 
 abbrev@1:
   version "1.1.1"
