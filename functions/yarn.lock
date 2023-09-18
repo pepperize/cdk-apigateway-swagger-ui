@@ -943,9 +943,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@^29.1.1":
-  version "29.5.4"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.4.tgz#9d0a16edaa009a71e6a71a999acd582514dab566"
-  integrity sha512-PhglGmhWeD46FYOVLt3X7TiWjzwuVGW9wG/4qocPevXMjCmrIc5b6db9WjeGE4QYVpUAWMDv3v0IiBwObY289A==
+  version "29.5.5"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-29.5.5.tgz#727204e06228fe24373df9bae76b90f3e8236a2a"
+  integrity sha512-ebylz2hnsWR9mYvmBFbXJXr+33UPc4+ZdxyDXh5w0FlPBTfCVN3wPL+kuOiQt3xvrK419v7XWeAs+AeOksafXg==
   dependencies:
     expect "^29.0.0"
     pretty-format "^29.0.0"
@@ -978,9 +978,9 @@
   integrity sha512-IOXCvVRToe7e0ny7HpT/X9Rb2RYtElG1a+VshjwT00HxrM2dWBApHQoqsI6WiY7Q03vdf2bCrIGzVrkF/5t10w==
 
 "@types/node@^14":
-  version "14.18.59"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.59.tgz#2b61a51d875e2a4deb0c6b498ff21a78e691edc6"
-  integrity sha512-NWJMpBL2Xs3MY93yrD6YrrTKep8eIA6iMnfG4oIc6LrTRlBZgiSCGiY3V/Owlp6umIBLyKb4F8Q7hxWatjYH5A==
+  version "14.18.61"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.61.tgz#752097010d85f6279b3069811bf0e99eba996096"
+  integrity sha512-1mFT4DqS4/s9tlZbdkwEB/EnSykA9MDeDLIk3FHApGvIMGY//qgstB2gu9GKGESWyW/qiRUO+jhlLJ9bBJ8j+Q==
 
 "@types/prettier@^2.1.5":
   version "2.7.1"
