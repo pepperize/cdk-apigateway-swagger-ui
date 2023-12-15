@@ -302,6 +302,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@codegenie/serverless-express@^4.10.7":
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/@codegenie/serverless-express/-/serverless-express-4.12.1.tgz#dd966ea1109e443f455ec4835f176b237d7d9091"
+  integrity sha512-hyvDJZLCcGSP7pr8dTnxW19JjA/M26r2tNonlAw1oRgSctMeQw680wumbqOKhkG42IJ1to8NJo0YfDYoXWjfuA==
+
 "@colors/colors@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
@@ -1166,9 +1171,11 @@
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
 "@vendia/serverless-express@^4.10.1":
-  version "4.10.4"
-  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.4.tgz#041c04cf47a8053392299dee244283fdfe84766e"
-  integrity sha512-OH2cX+LqtrayCIkHAkShiLnvrgqGDvwIQEex5dHc/uJitBQjIz3q7dZtfU7cZ5vcR9Vkide5xJQDBEMbXoWLeA==
+  version "4.10.5"
+  resolved "https://registry.yarnpkg.com/@vendia/serverless-express/-/serverless-express-4.10.5.tgz#82495defe131812635eab09f9a9c9923b67f75e8"
+  integrity sha512-Aq1LPNohtX2RUrhUqBG+CPiI2oVWcKap26Z5cJgD4DU+HzQdiiDRi3LL9OPBOdWVa2xBB7fSTJ4QdFjpUkzTHw==
+  dependencies:
+    "@codegenie/serverless-express" "^4.10.7"
 
 abbrev@1:
   version "1.1.1"
