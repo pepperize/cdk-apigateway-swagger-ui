@@ -605,7 +605,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "4abd242e514a9d016c0e3fd5f973c0c1bcf2aa922dd5120ee4eb342eca8e5f2a.zip",
+          "S3Key": "9bced38023aa5f4a23830980d342f6a250610776b6e422876b5aca1305c10c2e.zip",
         },
         "Description": "functions/src/swagger-ui.lambda.ts",
         "Environment": Object {
