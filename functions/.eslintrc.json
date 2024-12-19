@@ -7,8 +7,7 @@
   "root": true,
   "plugins": [
     "@typescript-eslint",
-    "import",
-    "prettier"
+    "import"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,7 +17,6 @@
   },
   "extends": [
     "plugin:import/typescript",
-    "prettier",
     "plugin:prettier/recommended"
   ],
   "settings": {
@@ -38,16 +36,12 @@
   },
   "ignorePatterns": [
     "*.js",
-    "!.projenrc.js",
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
     "coverage"
   ],
   "rules": {
-    "prettier/prettier": [
-      "error"
-    ],
     "@typescript-eslint/no-require-imports": [
       "error"
     ],
@@ -78,7 +72,7 @@
         }
       }
     ],
-    "no-duplicate-imports": [
+    "import/no-duplicates": [
       "error"
     ],
     "no-shadow": [
@@ -128,15 +122,5 @@
       }
     ]
   },
-  "overrides": [
-    {
-      "files": [
-        ".projenrc.js"
-      ],
-      "rules": {
-        "@typescript-eslint/no-require-imports": "off",
-        "import/no-extraneous-dependencies": "off"
-      }
-    }
-  ]
+  "overrides": []
 }
