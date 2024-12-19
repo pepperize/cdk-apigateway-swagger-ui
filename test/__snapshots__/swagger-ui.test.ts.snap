@@ -2,6 +2,130 @@
 
 exports[`SwaggerUi Should match snapshot 1`] = `
 Object {
+  "Mappings": Object {
+    "LatestNodeRuntimeMap": Object {
+      "af-south-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-east-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-2": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-3": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-south-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-south-2": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-2": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-3": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-4": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-5": Object {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-7": Object {
+        "value": "nodejs20.x",
+      },
+      "ca-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "ca-west-1": Object {
+        "value": "nodejs20.x",
+      },
+      "cn-north-1": Object {
+        "value": "nodejs18.x",
+      },
+      "cn-northwest-1": Object {
+        "value": "nodejs18.x",
+      },
+      "eu-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-central-2": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-isoe-west-1": Object {
+        "value": "nodejs18.x",
+      },
+      "eu-north-1": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-south-1": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-south-2": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-west-1": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-west-2": Object {
+        "value": "nodejs20.x",
+      },
+      "eu-west-3": Object {
+        "value": "nodejs20.x",
+      },
+      "il-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "me-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "me-south-1": Object {
+        "value": "nodejs20.x",
+      },
+      "mx-central-1": Object {
+        "value": "nodejs20.x",
+      },
+      "sa-east-1": Object {
+        "value": "nodejs20.x",
+      },
+      "us-east-1": Object {
+        "value": "nodejs20.x",
+      },
+      "us-east-2": Object {
+        "value": "nodejs20.x",
+      },
+      "us-gov-east-1": Object {
+        "value": "nodejs18.x",
+      },
+      "us-gov-west-1": Object {
+        "value": "nodejs18.x",
+      },
+      "us-iso-east-1": Object {
+        "value": "nodejs18.x",
+      },
+      "us-iso-west-1": Object {
+        "value": "nodejs18.x",
+      },
+      "us-isob-east-1": Object {
+        "value": "nodejs18.x",
+      },
+      "us-west-1": Object {
+        "value": "nodejs20.x",
+      },
+      "us-west-2": Object {
+        "value": "nodejs20.x",
+      },
+    },
+  },
   "Outputs": Object {
     "ApiEndpoint4F160690": Object {
       "Value": Object {
@@ -30,15 +154,9 @@ Object {
       },
     },
   },
-  "Parameters": Object {
-    "BootstrapVersion": Object {
-      "Default": "/cdk-bootstrap/hnb659fds/version",
-      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
-      "Type": "AWS::SSM::Parameter::Value<String>",
-    },
-  },
   "Resources": Object {
     "ApiAccountA18C9B29": Object {
+      "DeletionPolicy": "Retain",
       "DependsOn": Array [
         "ApiF70053CD",
       ],
@@ -51,8 +169,10 @@ Object {
         },
       },
       "Type": "AWS::ApiGateway::Account",
+      "UpdateReplacePolicy": "Retain",
     },
     "ApiCloudWatchRole73EC6FC4": Object {
+      "DeletionPolicy": "Retain",
       "Properties": Object {
         "AssumeRolePolicyDocument": Object {
           "Statement": Array [
@@ -82,6 +202,7 @@ Object {
         ],
       },
       "Type": "AWS::IAM::Role",
+      "UpdateReplacePolicy": "Retain",
     },
     "ApiDeploymentB17BE62D53ff4e9ae5ff9cf54bd6b3125f8b416f": Object {
       "DependsOn": Array [
@@ -100,6 +221,9 @@ Object {
       "Type": "AWS::ApiGateway::Deployment",
     },
     "ApiDeploymentStageprod3EB9684E": Object {
+      "DependsOn": Array [
+        "ApiAccountA18C9B29",
+      ],
       "Properties": Object {
         "DeploymentId": Object {
           "Ref": "ApiDeploymentB17BE62D53ff4e9ae5ff9cf54bd6b3125f8b416f",
@@ -401,12 +525,7 @@ Object {
         "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
       ],
       "Properties": Object {
-        "Code": Object {
-          "S3Bucket": Object {
-            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
-          },
-          "S3Key": "b120b13d9d868c7622e7db1b68bae4c0f82ffd0227b8c15f2cef38e186ff3827.zip",
-        },
+        "Code": Any<Object>,
         "Handler": "index.handler",
         "Role": Object {
           "Fn::GetAtt": Array [
@@ -414,7 +533,16 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs14.x",
+        "Runtime": Object {
+          "Fn::FindInMap": Array [
+            "LatestNodeRuntimeMap",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            "value",
+          ],
+        },
+        "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -479,12 +607,7 @@ Object {
         "SwaggerUiApiDocsFunctionServiceRoleFFB489F6",
       ],
       "Properties": Object {
-        "Code": Object {
-          "S3Bucket": Object {
-            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
-          },
-          "S3Key": "3c6225d593e2b0972576d9a998891587398cfe9a0b004db02bb249bf51730e4d.zip",
-        },
+        "Code": Any<Object>,
         "Description": "functions/src/api-docs.lambda.ts",
         "Environment": Object {
           "Variables": Object {
@@ -498,7 +621,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs18.x",
+        "Runtime": "nodejs22.x",
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -601,12 +724,7 @@ Object {
         "SwaggerUiSwaggerUiFunctionServiceRoleD19EE363",
       ],
       "Properties": Object {
-        "Code": Object {
-          "S3Bucket": Object {
-            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
-          },
-          "S3Key": "4abd242e514a9d016c0e3fd5f973c0c1bcf2aa922dd5120ee4eb342eca8e5f2a.zip",
-        },
+        "Code": Any<Object>,
         "Description": "functions/src/swagger-ui.lambda.ts",
         "Environment": Object {
           "Variables": Object {
@@ -620,7 +738,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "nodejs18.x",
+        "Runtime": "nodejs22.x",
       },
       "Type": "AWS::Lambda::Function",
     },
@@ -677,33 +795,6 @@ Object {
         ],
       },
       "Type": "AWS::IAM::Role",
-    },
-  },
-  "Rules": Object {
-    "CheckBootstrapVersion": Object {
-      "Assertions": Array [
-        Object {
-          "Assert": Object {
-            "Fn::Not": Array [
-              Object {
-                "Fn::Contains": Array [
-                  Array [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                  ],
-                  Object {
-                    "Ref": "BootstrapVersion",
-                  },
-                ],
-              },
-            ],
-          },
-          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
-        },
-      ],
     },
   },
 }
