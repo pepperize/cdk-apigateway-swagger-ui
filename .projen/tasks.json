@@ -60,7 +60,7 @@
       "description": "Create a JavaScript bundle from functions/src/api-docs.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
@@ -69,7 +69,7 @@
       "description": "Continuously update the JavaScript bundle from functions/src/api-docs.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+          "exec": "esbuild --bundle functions/src/api-docs.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/functions/src/api-docs.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },
@@ -78,7 +78,7 @@
       "description": "Create a JavaScript bundle from functions/src/swagger-ui.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
+          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/*"
         }
       ]
     },
@@ -87,7 +87,7 @@
       "description": "Continuously update the JavaScript bundle from functions/src/swagger-ui.lambda.ts",
       "steps": [
         {
-          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node18\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
+          "exec": "esbuild --bundle functions/src/swagger-ui.lambda.ts --target=\"node22\" --platform=\"node\" --outfile=\"assets/functions/src/swagger-ui.lambda/index.js\" --tsconfig=\"tsconfig.dev.json\" --external:@aws-sdk/* --watch"
         }
       ]
     },

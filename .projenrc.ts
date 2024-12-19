@@ -3,7 +3,7 @@ import { awscdk, javascript, typescript } from "projen";
 const project = new AwsCdkConstructLibrary({
   author: "Patrick Florek",
   authorAddress: "patrick.florek@gmail.com",
-  cdkVersion: "2.1.0",
+  cdkVersion: "2.173.2",
   name: "@pepperize/cdk-apigateway-swagger-ui",
   description: "Add SwaggerUI to your AWS Apigateway RestApi",
   keywords: [
@@ -22,7 +22,7 @@ const project = new AwsCdkConstructLibrary({
 
   projenrcTs: true,
 
-  devDeps: ["@pepperize/projen-awscdk-construct@~0.0.730"],
+  devDeps: ["@pepperize/projen-awscdk-construct@~0.0.730", "jest-cdk-snapshot"],
 
   versionrcOptions: {
     types: [{ type: "chore", section: "Chore", hidden: false }],
@@ -48,6 +48,13 @@ const project = new AwsCdkConstructLibrary({
 
   gitignore: ["/cdk.out/"],
   npmignore: ["/functions/", "!/assets/functions/"],
+
+  lambdaOptions: {
+    runtime: awscdk.LambdaRuntime.NODEJS_22_X,
+    bundlingOptions: {
+      externals: [],
+    },
+  },
 });
 
 new awscdk.LambdaFunction(project, {
@@ -55,12 +62,14 @@ new awscdk.LambdaFunction(project, {
   constructFile: "src/api-docs-function.ts",
   constructName: "ApiDocsFunction",
   cdkDeps: project.cdkDeps,
+  runtime: awscdk.LambdaRuntime.NODEJS_22_X,
 });
 new awscdk.LambdaFunction(project, {
   entrypoint: "functions/src/swagger-ui.lambda.ts",
   constructFile: "src/swagger-ui-function.ts",
   constructName: "SwaggerUiFunction",
   cdkDeps: project.cdkDeps,
+  runtime: awscdk.LambdaRuntime.NODEJS_22_X,
 });
 
 const dependabot = project.tryFindObjectFile(".github/dependabot.yml");
