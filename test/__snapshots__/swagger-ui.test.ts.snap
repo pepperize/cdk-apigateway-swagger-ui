@@ -1,151 +1,27 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`SwaggerUi Should match snapshot 1`] = `
-Object {
-  "Mappings": Object {
-    "LatestNodeRuntimeMap": Object {
-      "af-south-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-east-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-northeast-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-northeast-2": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-northeast-3": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-south-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-south-2": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-2": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-3": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-4": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-5": Object {
-        "value": "nodejs20.x",
-      },
-      "ap-southeast-7": Object {
-        "value": "nodejs20.x",
-      },
-      "ca-central-1": Object {
-        "value": "nodejs20.x",
-      },
-      "ca-west-1": Object {
-        "value": "nodejs20.x",
-      },
-      "cn-north-1": Object {
-        "value": "nodejs18.x",
-      },
-      "cn-northwest-1": Object {
-        "value": "nodejs18.x",
-      },
-      "eu-central-1": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-central-2": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-isoe-west-1": Object {
-        "value": "nodejs18.x",
-      },
-      "eu-north-1": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-south-1": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-south-2": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-west-1": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-west-2": Object {
-        "value": "nodejs20.x",
-      },
-      "eu-west-3": Object {
-        "value": "nodejs20.x",
-      },
-      "il-central-1": Object {
-        "value": "nodejs20.x",
-      },
-      "me-central-1": Object {
-        "value": "nodejs20.x",
-      },
-      "me-south-1": Object {
-        "value": "nodejs20.x",
-      },
-      "mx-central-1": Object {
-        "value": "nodejs20.x",
-      },
-      "sa-east-1": Object {
-        "value": "nodejs20.x",
-      },
-      "us-east-1": Object {
-        "value": "nodejs20.x",
-      },
-      "us-east-2": Object {
-        "value": "nodejs20.x",
-      },
-      "us-gov-east-1": Object {
-        "value": "nodejs18.x",
-      },
-      "us-gov-west-1": Object {
-        "value": "nodejs18.x",
-      },
-      "us-iso-east-1": Object {
-        "value": "nodejs18.x",
-      },
-      "us-iso-west-1": Object {
-        "value": "nodejs18.x",
-      },
-      "us-isob-east-1": Object {
-        "value": "nodejs18.x",
-      },
-      "us-west-1": Object {
-        "value": "nodejs20.x",
-      },
-      "us-west-2": Object {
-        "value": "nodejs20.x",
-      },
-    },
-  },
-  "Outputs": Object {
-    "ApiEndpoint4F160690": Object {
-      "Value": Object {
-        "Fn::Join": Array [
+{
+  "Outputs": {
+    "ApiEndpoint4F160690": {
+      "Value": {
+        "Fn::Join": [
           "",
-          Array [
+          [
             "https://",
-            Object {
+            {
               "Ref": "ApiF70053CD",
             },
             ".execute-api.",
-            Object {
+            {
               "Ref": "AWS::Region",
             },
             ".",
-            Object {
+            {
               "Ref": "AWS::URLSuffix",
             },
             "/",
-            Object {
+            {
               "Ref": "ApiDeploymentStageprod3EB9684E",
             },
             "/",
@@ -154,15 +30,15 @@ Object {
       },
     },
   },
-  "Resources": Object {
-    "ApiAccountA18C9B29": Object {
+  "Resources": {
+    "ApiAccountA18C9B29": {
       "DeletionPolicy": "Retain",
-      "DependsOn": Array [
+      "DependsOn": [
         "ApiF70053CD",
       ],
-      "Properties": Object {
-        "CloudWatchRoleArn": Object {
-          "Fn::GetAtt": Array [
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
             "ApiCloudWatchRole73EC6FC4",
             "Arn",
           ],
@@ -171,28 +47,28 @@ Object {
       "Type": "AWS::ApiGateway::Account",
       "UpdateReplacePolicy": "Retain",
     },
-    "ApiCloudWatchRole73EC6FC4": Object {
+    "ApiCloudWatchRole73EC6FC4": {
       "DeletionPolicy": "Retain",
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "apigateway.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
@@ -204,105 +80,105 @@ Object {
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "ApiDeploymentB17BE62D53ff4e9ae5ff9cf54bd6b3125f8b416f": Object {
-      "DependsOn": Array [
+    "ApiDeploymentB17BE62D53ff4e9ae5ff9cf54bd6b3125f8b416f": {
+      "DependsOn": [
         "ApiapidocsjsonGETFBE5FD3D",
         "ApiapidocsjsonF4C2B6CE",
         "ApiapidocsproxyGET9E5CEF71",
         "Apiapidocsproxy08FBC5FA",
         "ApiapidocsEBBEE27E",
       ],
-      "Properties": Object {
+      "Properties": {
         "Description": "Automatically created by the RestApi construct",
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Deployment",
     },
-    "ApiDeploymentStageprod3EB9684E": Object {
-      "DependsOn": Array [
+    "ApiDeploymentStageprod3EB9684E": {
+      "DependsOn": [
         "ApiAccountA18C9B29",
       ],
-      "Properties": Object {
-        "DeploymentId": Object {
+      "Properties": {
+        "DeploymentId": {
           "Ref": "ApiDeploymentB17BE62D53ff4e9ae5ff9cf54bd6b3125f8b416f",
         },
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
         "StageName": "prod",
       },
       "Type": "AWS::ApiGateway::Stage",
     },
-    "ApiF70053CD": Object {
-      "Properties": Object {
+    "ApiF70053CD": {
+      "Properties": {
         "Name": "Api",
       },
       "Type": "AWS::ApiGateway::RestApi",
     },
-    "ApiapidocsEBBEE27E": Object {
-      "Properties": Object {
-        "ParentId": Object {
-          "Fn::GetAtt": Array [
+    "ApiapidocsEBBEE27E": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
             "ApiF70053CD",
             "RootResourceId",
           ],
         },
         "PathPart": "api-docs",
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Resource",
     },
-    "ApiapidocsjsonF4C2B6CE": Object {
-      "Properties": Object {
-        "ParentId": Object {
-          "Fn::GetAtt": Array [
+    "ApiapidocsjsonF4C2B6CE": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
             "ApiF70053CD",
             "RootResourceId",
           ],
         },
         "PathPart": "api-docs.json",
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Resource",
     },
-    "ApiapidocsjsonGETApiPermissionApiGETapidocsjson0EB268C0": Object {
-      "Properties": Object {
+    "ApiapidocsjsonGETApiPermissionApiGETapidocsjson0EB268C0": {
+      "Properties": {
         "Action": "lambda:InvokeFunction",
-        "FunctionName": Object {
-          "Fn::GetAtt": Array [
+        "FunctionName": {
+          "Fn::GetAtt": [
             "SwaggerUiApiDocsFunctionD75F49C7",
             "Arn",
           ],
         },
         "Principal": "apigateway.amazonaws.com",
-        "SourceArn": Object {
-          "Fn::Join": Array [
+        "SourceArn": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "arn:",
-              Object {
+              {
                 "Ref": "AWS::Partition",
               },
               ":execute-api:",
-              Object {
+              {
                 "Ref": "AWS::Region",
               },
               ":",
-              Object {
+              {
                 "Ref": "AWS::AccountId",
               },
               ":",
-              Object {
+              {
                 "Ref": "ApiF70053CD",
               },
               "/",
-              Object {
+              {
                 "Ref": "ApiDeploymentStageprod3EB9684E",
               },
               "/GET/api-docs.json",
@@ -312,34 +188,34 @@ Object {
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "ApiapidocsjsonGETApiPermissionTestApiGETapidocsjson7A485C46": Object {
-      "Properties": Object {
+    "ApiapidocsjsonGETApiPermissionTestApiGETapidocsjson7A485C46": {
+      "Properties": {
         "Action": "lambda:InvokeFunction",
-        "FunctionName": Object {
-          "Fn::GetAtt": Array [
+        "FunctionName": {
+          "Fn::GetAtt": [
             "SwaggerUiApiDocsFunctionD75F49C7",
             "Arn",
           ],
         },
         "Principal": "apigateway.amazonaws.com",
-        "SourceArn": Object {
-          "Fn::Join": Array [
+        "SourceArn": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "arn:",
-              Object {
+              {
                 "Ref": "AWS::Partition",
               },
               ":execute-api:",
-              Object {
+              {
                 "Ref": "AWS::Region",
               },
               ":",
-              Object {
+              {
                 "Ref": "AWS::AccountId",
               },
               ":",
-              Object {
+              {
                 "Ref": "ApiF70053CD",
               },
               "/test-invoke-stage/GET/api-docs.json",
@@ -349,28 +225,28 @@ Object {
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "ApiapidocsjsonGETFBE5FD3D": Object {
-      "Properties": Object {
+    "ApiapidocsjsonGETFBE5FD3D": {
+      "Properties": {
         "AuthorizationType": "NONE",
         "HttpMethod": "GET",
-        "Integration": Object {
+        "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
-          "Uri": Object {
-            "Fn::Join": Array [
+          "Uri": {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":apigateway:",
-                Object {
+                {
                   "Ref": "AWS::Region",
                 },
                 ":lambda:path/2015-03-31/functions/",
-                Object {
-                  "Fn::GetAtt": Array [
+                {
+                  "Fn::GetAtt": [
                     "SwaggerUiApiDocsFunctionD75F49C7",
                     "Arn",
                   ],
@@ -380,49 +256,49 @@ Object {
             ],
           },
         },
-        "ResourceId": Object {
+        "ResourceId": {
           "Ref": "ApiapidocsjsonF4C2B6CE",
         },
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Method",
     },
-    "Apiapidocsproxy08FBC5FA": Object {
-      "Properties": Object {
-        "ParentId": Object {
+    "Apiapidocsproxy08FBC5FA": {
+      "Properties": {
+        "ParentId": {
           "Ref": "ApiapidocsEBBEE27E",
         },
         "PathPart": "{proxy+}",
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Resource",
     },
-    "ApiapidocsproxyGET9E5CEF71": Object {
-      "Properties": Object {
+    "ApiapidocsproxyGET9E5CEF71": {
+      "Properties": {
         "AuthorizationType": "NONE",
         "HttpMethod": "GET",
-        "Integration": Object {
+        "Integration": {
           "IntegrationHttpMethod": "POST",
           "Type": "AWS_PROXY",
-          "Uri": Object {
-            "Fn::Join": Array [
+          "Uri": {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":apigateway:",
-                Object {
+                {
                   "Ref": "AWS::Region",
                 },
                 ":lambda:path/2015-03-31/functions/",
-                Object {
-                  "Fn::GetAtt": Array [
+                {
+                  "Fn::GetAtt": [
                     "SwaggerUiSwaggerUiFunction76567BED",
                     "Arn",
                   ],
@@ -432,47 +308,47 @@ Object {
             ],
           },
         },
-        "ResourceId": Object {
+        "ResourceId": {
           "Ref": "Apiapidocsproxy08FBC5FA",
         },
-        "RestApiId": Object {
+        "RestApiId": {
           "Ref": "ApiF70053CD",
         },
       },
       "Type": "AWS::ApiGateway::Method",
     },
-    "ApiapidocsproxyGETApiPermissionApiGETapidocsproxyF5189CF8": Object {
-      "Properties": Object {
+    "ApiapidocsproxyGETApiPermissionApiGETapidocsproxyF5189CF8": {
+      "Properties": {
         "Action": "lambda:InvokeFunction",
-        "FunctionName": Object {
-          "Fn::GetAtt": Array [
+        "FunctionName": {
+          "Fn::GetAtt": [
             "SwaggerUiSwaggerUiFunction76567BED",
             "Arn",
           ],
         },
         "Principal": "apigateway.amazonaws.com",
-        "SourceArn": Object {
-          "Fn::Join": Array [
+        "SourceArn": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "arn:",
-              Object {
+              {
                 "Ref": "AWS::Partition",
               },
               ":execute-api:",
-              Object {
+              {
                 "Ref": "AWS::Region",
               },
               ":",
-              Object {
+              {
                 "Ref": "AWS::AccountId",
               },
               ":",
-              Object {
+              {
                 "Ref": "ApiF70053CD",
               },
               "/",
-              Object {
+              {
                 "Ref": "ApiDeploymentStageprod3EB9684E",
               },
               "/GET/api-docs/*",
@@ -482,34 +358,34 @@ Object {
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "ApiapidocsproxyGETApiPermissionTestApiGETapidocsproxy8A8A4E69": Object {
-      "Properties": Object {
+    "ApiapidocsproxyGETApiPermissionTestApiGETapidocsproxy8A8A4E69": {
+      "Properties": {
         "Action": "lambda:InvokeFunction",
-        "FunctionName": Object {
-          "Fn::GetAtt": Array [
+        "FunctionName": {
+          "Fn::GetAtt": [
             "SwaggerUiSwaggerUiFunction76567BED",
             "Arn",
           ],
         },
         "Principal": "apigateway.amazonaws.com",
-        "SourceArn": Object {
-          "Fn::Join": Array [
+        "SourceArn": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "arn:",
-              Object {
+              {
                 "Ref": "AWS::Partition",
               },
               ":execute-api:",
-              Object {
+              {
                 "Ref": "AWS::Region",
               },
               ":",
-              Object {
+              {
                 "Ref": "AWS::AccountId",
               },
               ":",
-              Object {
+              {
                 "Ref": "ApiF70053CD",
               },
               "/test-invoke-stage/GET/api-docs/*",
@@ -519,54 +395,46 @@ Object {
       },
       "Type": "AWS::Lambda::Permission",
     },
-    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": Object {
-      "DependsOn": Array [
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
+      "DependsOn": [
         "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
         "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
             "Arn",
           ],
         },
-        "Runtime": Object {
-          "Fn::FindInMap": Array [
-            "LatestNodeRuntimeMap",
-            Object {
-              "Ref": "AWS::Region",
-            },
-            "value",
-          ],
-        },
+        "Runtime": "nodejs24.x",
         "Timeout": 900,
       },
       "Type": "AWS::Lambda::Function",
     },
-    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -577,12 +445,12 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": Array [
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
                 "logs:PutRetentionPolicy",
                 "logs:DeleteRetentionPolicy",
               ],
@@ -593,54 +461,54 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "SwaggerUiApiDocsFunctionD75F49C7": Object {
-      "DependsOn": Array [
+    "SwaggerUiApiDocsFunctionD75F49C7": {
+      "DependsOn": [
         "SwaggerUiApiDocsFunctionServiceRoleDefaultPolicyA6BC6934",
         "SwaggerUiApiDocsFunctionServiceRoleFFB489F6",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Description": "functions/src/api-docs.lambda.ts",
-        "Environment": Object {
-          "Variables": Object {
+        "Environment": {
+          "Variables": {
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
           },
         },
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "SwaggerUiApiDocsFunctionServiceRoleFFB489F6",
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs26.x",
       },
       "Type": "AWS::Lambda::Function",
     },
-    "SwaggerUiApiDocsFunctionLogRetention78C079DF": Object {
-      "Properties": Object {
-        "LogGroupName": Object {
-          "Fn::Join": Array [
+    "SwaggerUiApiDocsFunctionLogRetention78C079DF": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "/aws/lambda/",
-              Object {
+              {
                 "Ref": "SwaggerUiApiDocsFunctionD75F49C7",
               },
             ],
           ],
         },
         "RetentionInDays": 7,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
             "Arn",
           ],
@@ -648,27 +516,27 @@ Object {
       },
       "Type": "Custom::LogRetention",
     },
-    "SwaggerUiApiDocsFunctionServiceRoleDefaultPolicyA6BC6934": Object {
-      "Properties": Object {
-        "PolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "SwaggerUiApiDocsFunctionServiceRoleDefaultPolicyA6BC6934": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
               "Action": "apigateway:GET",
               "Effect": "Allow",
-              "Resource": Object {
-                "Fn::Join": Array [
+              "Resource": {
+                "Fn::Join": [
                   "",
-                  Array [
+                  [
                     "arn:",
-                    Object {
+                    {
                       "Ref": "AWS::Partition",
                     },
                     ":apigateway:",
-                    Object {
+                    {
                       "Ref": "AWS::Region",
                     },
                     "::/restapis/",
-                    Object {
+                    {
                       "Ref": "ApiF70053CD",
                     },
                     "/*",
@@ -680,35 +548,35 @@ Object {
           "Version": "2012-10-17",
         },
         "PolicyName": "SwaggerUiApiDocsFunctionServiceRoleDefaultPolicyA6BC6934",
-        "Roles": Array [
-          Object {
+        "Roles": [
+          {
             "Ref": "SwaggerUiApiDocsFunctionServiceRoleFFB489F6",
           },
         ],
       },
       "Type": "AWS::IAM::Policy",
     },
-    "SwaggerUiApiDocsFunctionServiceRoleFFB489F6": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "SwaggerUiApiDocsFunctionServiceRoleFFB489F6": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
@@ -719,45 +587,45 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "SwaggerUiSwaggerUiFunction76567BED": Object {
-      "DependsOn": Array [
+    "SwaggerUiSwaggerUiFunction76567BED": {
+      "DependsOn": [
         "SwaggerUiSwaggerUiFunctionServiceRoleD19EE363",
       ],
-      "Properties": Object {
+      "Properties": {
         "Code": Any<Object>,
         "Description": "functions/src/swagger-ui.lambda.ts",
-        "Environment": Object {
-          "Variables": Object {
+        "Environment": {
+          "Variables": {
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
           },
         },
         "Handler": "index.handler",
-        "Role": Object {
-          "Fn::GetAtt": Array [
+        "Role": {
+          "Fn::GetAtt": [
             "SwaggerUiSwaggerUiFunctionServiceRoleD19EE363",
             "Arn",
           ],
         },
-        "Runtime": "nodejs22.x",
+        "Runtime": "nodejs26.x",
       },
       "Type": "AWS::Lambda::Function",
     },
-    "SwaggerUiSwaggerUiFunctionLogRetentionF848B51E": Object {
-      "Properties": Object {
-        "LogGroupName": Object {
-          "Fn::Join": Array [
+    "SwaggerUiSwaggerUiFunctionLogRetentionF848B51E": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
             "",
-            Array [
+            [
               "/aws/lambda/",
-              Object {
+              {
                 "Ref": "SwaggerUiSwaggerUiFunction76567BED",
               },
             ],
           ],
         },
         "RetentionInDays": 7,
-        "ServiceToken": Object {
-          "Fn::GetAtt": Array [
+        "ServiceToken": {
+          "Fn::GetAtt": [
             "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
             "Arn",
           ],
@@ -765,27 +633,27 @@ Object {
       },
       "Type": "Custom::LogRetention",
     },
-    "SwaggerUiSwaggerUiFunctionServiceRoleD19EE363": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
+    "SwaggerUiSwaggerUiFunctionServiceRoleD19EE363": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
-              "Principal": Object {
+              "Principal": {
                 "Service": "lambda.amazonaws.com",
               },
             },
           ],
           "Version": "2012-10-17",
         },
-        "ManagedPolicyArns": Array [
-          Object {
-            "Fn::Join": Array [
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
               "",
-              Array [
+              [
                 "arn:",
-                Object {
+                {
                   "Ref": "AWS::Partition",
                 },
                 ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",

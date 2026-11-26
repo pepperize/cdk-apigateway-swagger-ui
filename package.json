@@ -6,35 +6,36 @@
     "url": "https://github.com/pepperize/cdk-apigateway-swagger-ui.git"
   },
   "scripts": {
-    "build": "npx projen build",
-    "bump": "npx projen bump",
-    "bundle": "npx projen bundle",
-    "bundle:functions/src/api-docs.lambda": "npx projen bundle:functions/src/api-docs.lambda",
-    "bundle:functions/src/api-docs.lambda:watch": "npx projen bundle:functions/src/api-docs.lambda:watch",
-    "bundle:functions/src/swagger-ui.lambda": "npx projen bundle:functions/src/swagger-ui.lambda",
-    "bundle:functions/src/swagger-ui.lambda:watch": "npx projen bundle:functions/src/swagger-ui.lambda:watch",
-    "clobber": "npx projen clobber",
-    "compat": "npx projen compat",
-    "compile": "npx projen compile",
-    "default": "npx projen default",
-    "docgen": "npx projen docgen",
-    "eject": "npx projen eject",
-    "eslint": "npx projen eslint",
-    "format": "npx projen format",
-    "package": "npx projen package",
-    "package-all": "npx projen package-all",
-    "package:dotnet": "npx projen package:dotnet",
-    "package:java": "npx projen package:java",
-    "package:js": "npx projen package:js",
-    "package:python": "npx projen package:python",
-    "post-compile": "npx projen post-compile",
-    "pre-compile": "npx projen pre-compile",
-    "release": "npx projen release",
-    "test": "npx projen test",
-    "test:watch": "npx projen test:watch",
-    "unbump": "npx projen unbump",
-    "watch": "npx projen watch",
-    "projen": "npx projen",
+    "build": "projen build",
+    "bump": "projen bump",
+    "bump:releasable-commits": "projen bump:releasable-commits",
+    "bundle": "projen bundle",
+    "bundle:functions/src/api-docs.lambda": "projen bundle:functions/src/api-docs.lambda",
+    "bundle:functions/src/api-docs.lambda:watch": "projen bundle:functions/src/api-docs.lambda:watch",
+    "bundle:functions/src/swagger-ui.lambda": "projen bundle:functions/src/swagger-ui.lambda",
+    "bundle:functions/src/swagger-ui.lambda:watch": "projen bundle:functions/src/swagger-ui.lambda:watch",
+    "clobber": "projen clobber",
+    "compat": "projen compat",
+    "compile": "projen compile",
+    "default": "projen default",
+    "docgen": "projen docgen",
+    "eject": "projen eject",
+    "eslint": "projen eslint",
+    "format": "projen format",
+    "package": "projen package",
+    "package-all": "projen package-all",
+    "package:dotnet": "projen package:dotnet",
+    "package:java": "projen package:java",
+    "package:js": "projen package:js",
+    "package:python": "projen package:python",
+    "post-compile": "projen post-compile",
+    "pre-compile": "projen pre-compile",
+    "release": "projen release",
+    "test": "projen test",
+    "test:watch": "projen test:watch",
+    "unbump": "projen unbump",
+    "watch": "projen watch",
+    "projen": "projen",
     "cdk": "cdk"
   },
   "author": {
@@ -43,37 +44,37 @@
     "organization": true
   },
   "devDependencies": {
-    "@pepperize/projen-awscdk-construct": "~0.0.730",
-    "@types/jest": "^27",
-    "@types/node": "^14",
+    "@pepperize/projen-awscdk-construct": "~0.1.1",
+    "@types/jest": "^30",
+    "@types/node": "^22",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
-    "aws-cdk-lib": "2.173.2",
-    "commit-and-tag-version": "^12",
-    "constructs": "10.0.5",
-    "esbuild": "^0.17.11",
+    "aws-cdk-lib": "2.278.0",
+    "commit-and-tag-version": "^13",
+    "constructs": "10.5.1",
+    "esbuild": "^0.28.2",
     "eslint": "^9",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-import-resolver-typescript": "^3.5.3",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
-    "jest": "^27",
-    "jest-cdk-snapshot": "^2.2.5",
-    "jest-junit": "^15",
-    "jsii": "~5.6.0",
-    "jsii-diff": "^1.76.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "jest": "^30",
+    "jest-cdk-snapshot": "^2.3.6",
+    "jest-junit": "^17",
+    "jsii": "~6.0.0",
+    "jsii-diff": "^1.143.0",
     "jsii-docgen": "^10.5.0",
-    "jsii-pacmak": "^1.76.0",
-    "jsii-rosetta": "~5.6.0",
-    "prettier": "^2.8.4",
-    "projen": "~0.91.1",
-    "ts-jest": "^27",
+    "jsii-pacmak": "^1.143.0",
+    "jsii-rosetta": "~6.0.0",
+    "prettier": "^3.10.1",
+    "projen": "~0.105.12",
+    "ts-jest": "^29",
     "ts-node": "^10",
-    "typescript": "^4.9.5"
+    "typescript": "~6.0"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.173.2",
-    "constructs": "^10.0.5"
+    "aws-cdk-lib": "^2.278.0",
+    "constructs": "^10.5.1"
   },
   "keywords": [
     "apigateway",
@@ -87,8 +88,19 @@
     "swagger-ui",
     "utilities"
   ],
+  "engines": {
+    "node": ">= 22.13.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "yarn",
+      "version": "1.22.22",
+      "onFail": "ignore"
+    }
+  },
   "main": "lib/index.js",
   "license": "MIT",
+  "stability": "stable",
   "publishConfig": {
     "access": "public"
   },
@@ -129,15 +141,16 @@
         }
       ]
     ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.dev.json"
-      }
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "test/tsconfig.json"
+        }
+      ]
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
   "jsii": {
     "outdir": "dist",
     "targets": {
@@ -157,10 +170,8 @@
         "packageId": "Pepperize.CDK.ApigatewaySwaggerUi"
       }
     },
-    "tsc": {
-      "outDir": "lib",
-      "rootDir": "src"
-    }
+    "tsconfig": "tsconfig.json",
+    "validateTsconfig": "strict"
   },
   "//": "~~ Generated by projen. To modify, edit .projenrc.ts and run \"npx projen\"."
 }
