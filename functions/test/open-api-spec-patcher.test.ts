@@ -17,7 +17,7 @@ describe("OpenSpec is patched after exporting from apigateway", function () {
       optionPatcher.patch({
         servers: [{ url: "https://foobar/{x}", variables: { x: { default: "/x" } } }],
         paths: { other: 42, yetAnother: 42 },
-      })
+      }),
     ).toEqual({
       servers: [{ url: "https://foobar/{x}", variables: { x: { default: "/x" } } }],
       paths: { yetAnother: 42 },
@@ -30,13 +30,13 @@ describe("OpenSpec is patched after exporting from apigateway", function () {
         JSON.stringify({
           servers: [{ url: "https://foobar/{x}", variables: { x: { default: "/x" } } }],
           paths: { other: 42, yetAnother: 42 },
-        })
-      )
+        }),
+      ),
     ).toEqual(
       JSON.stringify({
         servers: [{ url: "https://foobar/{x}", variables: { x: { default: "/x" } } }],
         paths: { yetAnother: 42 },
-      })
+      }),
     );
   });
 

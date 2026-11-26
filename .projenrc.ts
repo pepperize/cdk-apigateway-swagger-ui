@@ -3,7 +3,8 @@ import { awscdk, javascript, typescript } from "projen";
 const project = new AwsCdkConstructLibrary({
   author: "Patrick Florek",
   authorAddress: "patrick.florek@gmail.com",
-  cdkVersion: "2.173.2",
+  cdkVersion: "2.278.0",
+  jsiiVersion: "~6.0.0",
   name: "@pepperize/cdk-apigateway-swagger-ui",
   description: "Add SwaggerUI to your AWS Apigateway RestApi",
   keywords: [
@@ -21,8 +22,14 @@ const project = new AwsCdkConstructLibrary({
   repositoryUrl: "https://github.com/pepperize/cdk-apigateway-swagger-ui.git",
 
   projenrcTs: true,
+  minNodeVersion: "22.13.0",
+  workflowNodeVersion: "24.x",
+  jestOptions: {
+    jestVersion: "^30",
+  },
+  packageManager: javascript.NodePackageManager.YARN_CLASSIC,
 
-  devDeps: ["@pepperize/projen-awscdk-construct@~0.0.730", "jest-cdk-snapshot"],
+  devDeps: ["@pepperize/projen-awscdk-construct@~0.1.1", "@types/node@^22", "typescript@~6.0", "jest-cdk-snapshot"],
 
   versionrcOptions: {
     types: [{ type: "chore", section: "Chore", hidden: false }],
@@ -40,36 +47,37 @@ const project = new AwsCdkConstructLibrary({
     module: "pepperize_cdk_apigateway_swagger_ui",
   },
   publishToMaven: {
-    mavenEndpoint: "https://s01.oss.sonatype.org",
     mavenGroupId: "com.pepperize",
     mavenArtifactId: "cdk-apigateway-swagger-ui",
     javaPackage: "com.pepperize.cdk.apigateway_swagger_ui",
   },
 
   gitignore: ["/cdk.out/"],
-  npmignore: ["/functions/", "!/assets/functions/"],
 
   lambdaOptions: {
-    runtime: awscdk.LambdaRuntime.NODEJS_22_X,
+    runtime: awscdk.LambdaRuntime.NODEJS_26_X,
     bundlingOptions: {
       externals: [],
     },
   },
 });
 
+project.addPackageIgnore("/functions/");
+project.addPackageIgnore("!/assets/functions/");
+
 new awscdk.LambdaFunction(project, {
   entrypoint: "functions/src/api-docs.lambda.ts",
   constructFile: "src/api-docs-function.ts",
   constructName: "ApiDocsFunction",
   cdkDeps: project.cdkDeps,
-  runtime: awscdk.LambdaRuntime.NODEJS_22_X,
+  runtime: awscdk.LambdaRuntime.NODEJS_26_X,
 });
 new awscdk.LambdaFunction(project, {
   entrypoint: "functions/src/swagger-ui.lambda.ts",
   constructFile: "src/swagger-ui-function.ts",
   constructName: "SwaggerUiFunction",
   cdkDeps: project.cdkDeps,
-  runtime: awscdk.LambdaRuntime.NODEJS_22_X,
+  runtime: awscdk.LambdaRuntime.NODEJS_26_X,
 });
 
 const dependabot = project.tryFindObjectFile(".github/dependabot.yml");
@@ -87,7 +95,7 @@ dependabot?.addToArray("updates", {
 project.tasks
   .tryFind("pre-compile")
   ?.prependExec(
-    "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda"
+    "npx copyfiles --flat functions/node_modules/swagger-ui-dist/swagger* functions/node_modules/swagger-ui-dist/favicon* assets/functions/src/swagger-ui.lambda",
   );
 
 project.tasks.tryFind("pre-compile")?.prependExec("(cd functions && yarn test)");
@@ -106,6 +114,10 @@ const functions = new typescript.TypeScriptProject({
   copyrightOwner: "Pepperize UG (haftungsbeschränkt)",
   name: "@pepperize/cdk-apigateway-swagger-ui-functions",
   defaultReleaseBranch: "main",
+  jestOptions: {
+    jestVersion: "^30",
+  },
+  devDeps: ["@types/node@^22", "typescript@~6.0"],
   deps: [
     "@types/aws-lambda",
     "@types/express",
