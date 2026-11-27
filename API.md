@@ -4,6 +4,8 @@
 
 ### SwaggerUi <a name="SwaggerUi" id="@pepperize/cdk-apigateway-swagger-ui.SwaggerUi"></a>
 
+- *Implements:* constructs.IConstruct, constructs.IDependable
+
 #### Initializers <a name="Initializers" id="@pepperize/cdk-apigateway-swagger-ui.SwaggerUi.Initializer"></a>
 
 ```typescript
